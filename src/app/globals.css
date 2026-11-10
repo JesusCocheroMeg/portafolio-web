@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+/* Paleta azul de las propuestas (DEC-03). Nada de morado. */
+@theme {
+  --color-page: #0a0f1c;
+  --color-surface: #121a2c;
+  --color-surface-2: #16213b;
+  --color-ink: #eaf0ff;
+  --color-muted: #9aa7c4;
+  --color-line: #25304a;
+  --color-accent: #3a6dff;
+  --color-accent-2: #6a92ff;
+  --font-sans: var(--font-manrope), "Helvetica Neue", system-ui, sans-serif;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Las secciones no quedan tapadas por la barra fija. */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
