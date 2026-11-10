@@ -13,8 +13,18 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: site.name,
+  metadataBase: new URL(site.url),
+  title: `${site.name} · Desarrollo de software`,
   description: site.description,
+  openGraph: {
+    type: "website",
+    locale: "es_CO",
+    url: "/",
+    siteName: site.name,
+    title: `${site.name} · Desarrollo de software`,
+    description: site.headline,
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
