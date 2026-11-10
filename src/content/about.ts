@@ -11,7 +11,7 @@ export const adapt = {
   cases: [
     {
       title: "Trabajo con lo que ya usan",
-      text: "Si ya tienen infraestructura, como Vercel, Google Cloud o Microsoft Azure, trabajo sobre ella. Si no la tienen, les recomiendo la mejor opción según mi experiencia y lo que necesite la plataforma. Y si la documentación vive en Notion, documento en Notion.",
+      text: "Si ya tienen infraestructura, como Vercel o Google Cloud, trabajo sobre ella. Si no la tienen, les recomiendo la mejor opción según mi experiencia y lo que necesite la plataforma. Y si la documentación vive en Notion, documento en Notion.",
     },
     {
       title: "Si es una plataforma grande",
