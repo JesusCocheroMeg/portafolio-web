@@ -22,7 +22,7 @@ export function Projects() {
             </Reveal>
             <ul className="mt-6 grid items-start gap-6 md:grid-cols-2">
               {c.projects.map((p, i) => (
-                <li key={p.name} className="h-full">
+                <li key={p.name} className={`h-full ${p.featured ? "md:col-span-2" : ""}`}>
                   <Reveal delay={i * 0.1} className="h-full">
                     <ProjectCard project={p} />
                   </Reveal>

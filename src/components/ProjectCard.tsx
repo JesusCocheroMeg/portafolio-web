@@ -33,6 +33,13 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.details.map((d) => (
               <p key={d}>{d}</p>
             ))}
+            {project.bullets && (
+              <ul className="list-disc space-y-1 pl-5 marker:text-accent-2">
+                {project.bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+            )}
           </div>
         )}
 

@@ -1,4 +1,4 @@
-// Fuente: centro/contenido/proyectos.md (DEC-06). ARM queda fuera hasta confirmarlo (DEC-07).
+// Fuente: centro/contenido/proyectos.md (DEC-06). ARM entra por decisión de Jesús (DEC-08).
 export type Project = {
   name: string;
   role: string;
@@ -8,6 +8,8 @@ export type Project = {
   bullets?: string[];
   tech?: string[];
   link?: { href: string; label: string };
+  /** Ocupa todo el ancho de la fila. */
+  featured?: boolean;
 };
 
 export type Company = { name: string; note: string; projects: Project[] };
@@ -17,6 +19,25 @@ export const companies: Company[] = [
     name: "MEG.IA",
     note: "Empresa actual",
     projects: [
+      {
+        name: "ARM · CRM con IA que se llena solo",
+        featured: true,
+        role: "Líder del desarrollo del producto",
+        summary:
+          "Mientras el equipo habla con sus clientes, la IA registra la venta, programa el seguimiento y avisa qué falta.",
+        highlight: "En desarrollo · lanzamiento en 2027, con empresas esperando para usarlo",
+        details: [
+          "CRM con inteligencia artificial. Mientras el equipo habla con sus clientes por llamada o WhatsApp, la IA registra la venta, programa el seguimiento y avisa qué falta. La persona solo confirma: el tiempo se va en vender, no en digitar.",
+          "Mi papel: lidero el desarrollo del producto — estrategia de lanzamiento, plan por etapas, arquitectura, estándares de seguridad y pruebas, y construcción de la plataforma.",
+        ],
+        bullets: [
+          "La IA registra la venta sola",
+          "Seguimiento automático por llamada y WhatsApp",
+          "Auditoría de todas las llamadas",
+          "Informes y tableros sin pedir a desarrollo",
+          "Cargas masivas desde cualquier Excel o imagen",
+        ],
+      },
       {
         name: "Speech Analytics",
         role: "Colaborador",
