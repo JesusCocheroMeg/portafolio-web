@@ -5,7 +5,6 @@ import {
   SiJsonwebtokens, SiMui, SiMysql, SiNatsdotio, SiNestjs, SiNextdotjs, SiNodedotjs, SiNotion,
   SiPrisma, SiReact, SiRedux, SiSequelize, SiTypescript, SiVercel, SiVite,
 } from "react-icons/si";
-import { VscAzure } from "react-icons/vsc";
 import type { TechName } from "@/content/about";
 import type { ContactId } from "@/content/contact";
 
@@ -27,7 +26,6 @@ export const techIcons: Record<TechName, IconType> = {
   JWT: SiJsonwebtokens,
   Docker: SiDocker,
   "Google Cloud": SiGooglecloud,
-  "Microsoft Azure": VscAzure,
   Vercel: SiVercel,
   "GitHub Actions": SiGithubactions,
   Git: SiGit,

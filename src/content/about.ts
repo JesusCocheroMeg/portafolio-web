@@ -37,7 +37,7 @@ export const techStack = [
 ] as const;
 
 export const tools = [
-  "Google Cloud", "Microsoft Azure", "Vercel", "GitHub Actions", "Git", "GitHub", "Notion",
+  "Google Cloud", "Vercel", "GitHub Actions", "Git", "GitHub", "Notion",
 ] as const;
 
 export type TechName = (typeof techStack)[number] | (typeof tools)[number];
