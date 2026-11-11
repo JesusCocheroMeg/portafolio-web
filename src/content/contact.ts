@@ -10,4 +10,12 @@ export const contact = {
   ],
 } as const;
 
+// Botón flotante (F14): abre WhatsApp con un mensaje ya escrito.
+export const whatsappFloat = {
+  label: "Escríbeme por WhatsApp",
+  href: `https://wa.me/573235252137?text=${encodeURIComponent(
+    "Hola Jesús, vi tu portafolio y me gustaría hablar contigo sobre un proyecto.",
+  )}`,
+};
+
 export type ContactId = (typeof contact.links)[number]["id"];

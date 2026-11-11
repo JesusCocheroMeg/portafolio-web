@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { ParticlesBackground } from "@/components/ParticlesBackground";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navbar />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
