@@ -89,6 +89,7 @@ export const companies: Company[] = [
       },
       {
         name: "Speech Analytics",
+        featured: true,
         role: "Colaborador",
         summary:
           "IA que evalúa el 100 % de las llamadas de un contact center. Mi aporte: tickets, solicitudes y facturación automática.",
@@ -96,17 +97,6 @@ export const companies: Company[] = [
           "Transcribe y evalúa con IA el 100 % de las llamadas de un contact center, y entrena a los agentes con un cliente simulado. Ayudé a integrar el sistema de tickets y solicitudes de la plataforma, y a automatizar la facturación.",
         ],
         link: { href: "https://megia.com.co/productos/speech-analytics", label: "Ver producto" },
-      },
-      {
-        name: "Enigma",
-        role: "Colaborador",
-        summary:
-          "Contact center con IA: campañas, marcación automática y agentes de voz 24/7. Mi aporte: sistema de tickets y facturación automática.",
-        highlight: "2x en la productividad de los agentes, según MEG.IA",
-        details: [
-          "Plataforma de contact center con IA: campañas de llamadas, marcación automática, supervisión en vivo y agentes de voz que atienden 24/7. 2x en la productividad de los agentes, según MEG.IA. Ayudé a integrar el sistema de tickets y a automatizar la facturación.",
-        ],
-        link: { href: "https://megia.com.co/productos/enigma", label: "Ver producto" },
       },
     ],
   },
