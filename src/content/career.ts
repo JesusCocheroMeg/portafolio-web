@@ -21,7 +21,7 @@ export const career: CareerItem[] = [
     period: "abr 2024 – abr 2026",
     title: "Desarrollador de software",
     place: "One Contact International · Medellín",
-    text: "Lideré y desarrollé Focus, el CRM de ventas, y Nova, el ERP de gestión del personal.",
+    text: "Lideré de punta a punta Focus y Nova, de los requisitos con cada área a la capacitación, y un equipo de 4 personas. Ambos siguen en operación tras mi salida.",
     kind: "trabajo",
   },
   {

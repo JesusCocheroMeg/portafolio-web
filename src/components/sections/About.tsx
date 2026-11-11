@@ -41,6 +41,7 @@ export function About() {
           <blockquote className="mt-4 border-l-2 border-accent pl-4 text-lg leading-relaxed text-ink/90">
             {quality.text}
           </blockquote>
+          <p className="mt-4 text-sm font-semibold text-accent-2">{quality.proof}</p>
           <ul className="mt-6 flex flex-wrap gap-2">
             {quality.pillars.map((p) => (
               <li key={p} className="rounded-full bg-accent/15 px-3 py-1 text-xs font-bold text-accent-2">

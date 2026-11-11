@@ -30,8 +30,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${manrope.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col">
+    <html lang="es" suppressHydrationWarning className={`${manrope.variable} h-full antialiased`}>
+      <body suppressHydrationWarning className="flex min-h-full flex-col">
         <ParticlesBackground />
         <Navbar />
         {children}
