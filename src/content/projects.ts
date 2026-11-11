@@ -17,7 +17,7 @@ export type Company = { name: string; note: string; projects: Project[] };
 export const companies: Company[] = [
   {
     name: "MEG.IA",
-    note: "Empresa actual",
+    note: "may 2026 – hoy",
     projects: [
       {
         name: "ARM · CRM con IA que se llena solo",
@@ -62,7 +62,7 @@ export const companies: Company[] = [
   },
   {
     name: "One Contact International",
-    note: "Experiencia anterior",
+    note: "abr 2024 – abr 2026",
     projects: [
       {
         name: "CRM de ventas · Focus",

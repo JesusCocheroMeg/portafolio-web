@@ -2,6 +2,7 @@ import { Reveal } from "@/components/Reveal";
 import { SectionTitle } from "@/components/SectionTitle";
 import { techIcons } from "@/components/icons";
 import { adapt, quality, techStack, tools, type TechName } from "@/content/about";
+import { career } from "@/content/career";
 
 function TechGrid({ title, items }: { title: string; items: readonly TechName[] }) {
   return (
@@ -62,6 +63,33 @@ export function About() {
           ))}
         </ul>
         <p className="mt-6 max-w-3xl leading-relaxed text-muted">{adapt.closing}</p>
+      </Reveal>
+
+      <Reveal className="mt-20">
+        <h3 className="text-2xl font-bold">Trayectoria</h3>
+        <ol className="relative mt-8 space-y-8 border-l border-line pl-8">
+          {career.map((c) => (
+            <li key={c.period} className="relative">
+              <span
+                aria-hidden="true"
+                className={`absolute -left-[2.4rem] top-1.5 h-4 w-4 rounded-full border-2 ${
+                  c.current
+                    ? "border-accent-2 bg-accent shadow-[0_0_12px] shadow-accent-2"
+                    : "border-line bg-surface-2"
+                }`}
+              />
+              <p className="text-sm font-bold text-accent-2">
+                {c.period}
+                <span className="ml-2 rounded-full border border-line px-2 py-0.5 text-xs font-semibold text-muted">
+                  {c.kind === "trabajo" ? "Trabajo" : "Estudio"}
+                </span>
+              </p>
+              <h4 className="mt-1 text-lg font-bold">{c.title}</h4>
+              <p className="text-sm font-semibold text-muted">{c.place}</p>
+              <p className="mt-2 max-w-2xl leading-relaxed text-muted">{c.text}</p>
+            </li>
+          ))}
+        </ol>
       </Reveal>
 
       <Reveal className="mt-20 space-y-12">
