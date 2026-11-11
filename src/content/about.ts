@@ -1,7 +1,7 @@
 // Fuente: centro/contenido/sobre-mi.md (DEC-06). Si difieren, gana el contenido.
 export const quality = {
   title: "Lo que garantizo",
-  text: "Desde mi experiencia en desarrollo de software, la calidad del producto es vital: qué tan seguro es, cómo consume los recursos, qué tan optimizado está, qué tan sólida es su arquitectura y qué tan fácil es de mantener. Eso es algo que garantizo: a la larga es lo que hace rentable un sistema y lo que hace que la inversión valga la pena.",
+  text: "Desde mi experiencia en desarrollo de software, la calidad del producto es vital: qué tan seguro es, cómo consume los recursos, qué tan optimizado está, qué tan sólida es su arquitectura y qué tan fácil es de mantener. El desarrollo a la medida es una inversión valiosa y costosa, y sin calidad termina desaprovechándose. Eso es lo que garantizo: a la larga es lo que hace rentable un sistema y lo que hace que la inversión valga la pena.",
   proof: "Prueba de ello: los sistemas que he construido siguen funcionando y las empresas los mantienen sin depender de mí.",
   pillars: ["Seguridad", "Uso de recursos", "Optimización", "Arquitectura", "Mantenibilidad"],
 } as const;
