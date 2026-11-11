@@ -21,6 +21,9 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
+        env:
+          # Variable del repo (Settings → Secrets and variables → Actions → Variables). "false" las apaga.
+          NEXT_PUBLIC_SHOW_PROJECT_IMAGES: ${{ vars.SHOW_PROJECT_IMAGES }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}

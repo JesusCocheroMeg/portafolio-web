@@ -10,6 +10,8 @@ export type Project = {
   link?: { href: string; label: string };
   /** Ocupa todo el ancho de la fila. */
   featured?: boolean;
+  /** Capturas en `public/proyectos/`. La primera es la portada. Se ocultan con NEXT_PUBLIC_SHOW_PROJECT_IMAGES=false. */
+  images?: { src: string; alt: string }[];
 };
 
 export type Company = { name: string; note: string; projects: Project[] };
@@ -78,6 +80,12 @@ export const companies: Company[] = [
           "Roles y permisos configurables",
         ],
         tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "NestJS", "Prisma", "PostgreSQL", "Docker"],
+        images: [
+          { src: "/proyectos/portal/dashboard.webp", alt: "Portal de Clientes: dashboard administrativo con solicitudes de los últimos 30 días y su estado" },
+          { src: "/proyectos/portal/solicitudes.webp", alt: "Portal de Clientes: módulo de solicitudes con indicadores y vistas de tablero, tabla, lista y calendario (datos difuminados)" },
+          { src: "/proyectos/portal/productos.webp", alt: "Portal de Clientes: catálogo de productos y servicios (datos difuminados)" },
+          { src: "/proyectos/portal/reportes.webp", alt: "Portal de Clientes: reportes de consumo de servicios exportables a Excel (datos difuminados)" },
+        ],
       },
       {
         name: "Speech Analytics",
@@ -130,6 +138,12 @@ export const companies: Company[] = [
           "Despliegue automático con contenedores. Agilizó mucho la operación y mejoró de forma notable la organización de la empresa. Usado a diario por unos 20 administrativos.",
         ],
         tech: ["NestJS", "NATS", "Prisma", "MySQL", "JWT", "Docker", "GitHub Actions"],
+        images: [
+          { src: "/proyectos/nova/vision-general.webp", alt: "Nova: visión general de contratación con indicadores y gráficas del mes" },
+          { src: "/proyectos/nova/empleados.webp", alt: "Nova: lista de empleados con filtros, exportación y cambio de jefe (datos personales difuminados)" },
+          { src: "/proyectos/nova/reclutamiento.webp", alt: "Nova: gestión del staff de reclutamiento con estado de formador y reclutador (datos personales difuminados)" },
+          { src: "/proyectos/nova/evaluacion.webp", alt: "Nova: configuración del examen de onboarding" },
+        ],
       },
     ],
   },

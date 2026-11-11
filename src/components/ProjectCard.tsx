@@ -3,10 +3,14 @@
 import { useId, useState } from "react";
 import Tilt from "react-parallax-tilt";
 import type { Project } from "@/content/projects";
+import { flags } from "@/lib/flags";
+import { ImageGallery } from "@/components/ImageGallery";
 
 export function ProjectCard({ project }: { project: Project }) {
   const [open, setOpen] = useState(false);
   const detailsId = useId();
+  const images = flags.showProjectImages ? (project.images ?? []) : [];
+  const [galleryOpen, setGalleryOpen] = useState(false);
 
   return (
     <Tilt
@@ -63,6 +67,11 @@ export function ProjectCard({ project }: { project: Project }) {
           >
             {open ? "Ver menos" : "Ver más"}
           </button>
+          {images.length > 0 && (
+            <button type="button" onClick={() => setGalleryOpen(true)} className="text-muted hover:text-ink">
+              Ver capturas ({images.length}) ↗
+            </button>
+          )}
           {project.link && (
             <a href={project.link.href} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-ink">
               {project.link.label} ↗
@@ -70,6 +79,7 @@ export function ProjectCard({ project }: { project: Project }) {
           )}
         </div>
       </article>
+      {galleryOpen && <ImageGallery title={project.name} images={images} onClose={() => setGalleryOpen(false)} />}
     </Tilt>
   );
 }
