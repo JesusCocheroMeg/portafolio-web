@@ -38,6 +38,24 @@ git push -u origin feat/mi-cambio
 gh pr create --fill
 ```
 
+## Versiones
+
+El portafolio usa versiones `MAYOR.MENOR.PARCHE` ([SemVer](https://semver.org/lang/es/)):
+
+- **PARCHE** (`0.2.1`): corregir un texto o un detalle.
+- **MENOR** (`0.3.0`): algo nuevo, como un proyecto o una sección.
+- **MAYOR** (`1.0.0`): un cambio grande, como un rediseño.
+
+Para sacar una versión, dentro del PR:
+
+```bash
+npm version minor --no-git-tag-version   # o patch / major
+```
+
+Al fusionar el PR en `main`, `.github/workflows/release.yml` crea el tag `vX.Y.Z` y la
+[Release](https://github.com/JesusCocheroMeg/portafolio-web/releases) con la lista de PRs. La versión
+se ve en el pie de página y enlaza a su Release. Si `package.json` no cambia de versión, no se crea nada.
+
 ## Publicación
 
 - **Automática:** cada push a `main` construye y publica el sitio (`.github/workflows/deploy.yml`).
