@@ -67,6 +67,7 @@ export const companies: Company[] = [
         highlight: "En producción desde septiembre de 2026",
         details: [
           "Plataforma web que reúne en un solo lugar la relación entre una empresa de software y sus clientes. Cada cliente entra con su cuenta, ve los servicios que tiene contratados, consulta su consumo y sus facturas, y abre solicitudes de soporte con seguimiento de tiempos de respuesta. El equipo interno administra clientes, usuarios, permisos, catálogo de productos y reportes exportables.",
+          "Impacto: dio una visión 360° de clientes, licencias y contratos, agilizó la facturación (antes en parte manual) y permitió medir el área de soporte con su propio sistema de tickets.",
           "Mi papel: diseñé y construí la mayor parte de la plataforma —catálogo de servicios, contratación por cliente, facturación integrada con el consumo, reportes a Excel y control de roles y permisos—, desde el prototipo y el MVP hasta producción, y lideré la organización del proyecto.",
         ],
         bullets: [
@@ -109,11 +110,12 @@ export const companies: Company[] = [
         name: "CRM de ventas · Focus",
         role: "Líder y desarrollador principal",
         summary:
-          "Reemplazó el CRM que se le pagaba a un tercero, con uno hecho a la medida del negocio.",
+          "Reemplazó el CRM que se le pagaba a un tercero, con uno hecho a la medida del negocio. Usado a diario por unos 70 usuarios en dos turnos.",
         highlight: "COP 8–11 M al mes de ahorro, que se mantiene hasta hoy",
         details: [
           "Gestión de ventas de telecomunicaciones (móvil, hogar, internet dedicado y tecnología): clientes, campañas, roles por cargo, historial de cada cambio, agendamiento, logística, inventario y reportes en Excel.",
-          "Reemplazó el CRM que se pagaba a un tercero, con un sistema mucho más adecuado al negocio y mejor trazabilidad de las ventas. Ahorro de COP 8–11 millones al mes en lo que se pagaba por el sistema anterior, un resultado que se mantiene hasta hoy.",
+          "El CRM anterior era caro y no se ajustaba al negocio. Focus lo reemplazó con un sistema mucho más adecuado y mejor trazabilidad de las ventas. Ahorro de COP 8–11 millones al mes en lo que se pagaba por el sistema anterior, un resultado que se mantiene hasta hoy.",
+          "Lo lideré de punta a punta, de los requisitos con cada área a la capacitación. Tras mi salida sigue en operación y la empresa lo mantiene.",
         ],
         tech: ["React", "Vite", "Redux", "Material UI", "Node.js", "Express", "Sequelize", "MySQL", "JWT"],
       },
@@ -121,10 +123,11 @@ export const companies: Company[] = [
         name: "ERP Nova",
         role: "Líder y desarrollador principal",
         summary:
-          "Gestión del personal: reclutamiento, contratación, documentos y evaluaciones, con permisos por sede. Agilizó la operación y ordenó la empresa.",
+          "Centralizó la información e historial de los empleados, antes dispersos y en Excel, y pasó gran parte de los procesos a autogestión del propio empleado.",
+        highlight: "Sigue en operación y mantenido por la empresa tras mi salida",
         details: [
           "Plataforma de gestión del personal con arquitectura de microservicios: reclutamiento (candidatos, capacitaciones y asistencia), contratación, documentos, afiliaciones y evaluaciones, con usuarios, roles y permisos por sede.",
-          "Despliegue automático con contenedores. Agilizó mucho la operación y mejoró de forma notable la organización de la empresa.",
+          "Despliegue automático con contenedores. Agilizó mucho la operación y mejoró de forma notable la organización de la empresa. Usado a diario por unos 20 administrativos.",
         ],
         tech: ["NestJS", "NATS", "Prisma", "MySQL", "JWT", "Docker", "GitHub Actions"],
       },
