@@ -9,8 +9,8 @@ export default function Home() {
     <main className="relative z-10 flex-1">
       <Hero />
       <Services />
-      <About />
       <Projects />
+      <About />
       <Contact />
     </main>
   );

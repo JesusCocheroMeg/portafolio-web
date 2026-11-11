@@ -4,11 +4,12 @@ import { techIcons } from "@/components/icons";
 import { adapt, quality, techStack, tools, type TechName } from "@/content/about";
 import { career } from "@/content/career";
 
-function TechGrid({ title, items }: { title: string; items: readonly TechName[] }) {
+function TechGrid({ title, note, items }: { title: string; note?: string; items: readonly TechName[] }) {
   return (
     <div>
-      <h3 className="mb-5 text-xl font-bold">{title}</h3>
-      <ul className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-8">
+      <h3 className="text-xl font-bold">{title}</h3>
+      {note && <p className="mt-2 max-w-3xl text-muted">{note}</p>}
+      <ul className="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-8">
         {items.map((name) => {
           const Icon = techIcons[name];
           return (
@@ -94,8 +95,12 @@ export function About() {
       </Reveal>
 
       <Reveal className="mt-20 space-y-12">
-        <TechGrid title="Tecnologías" items={techStack} />
-        <TechGrid title="Infraestructura y herramientas" items={tools} />
+        <TechGrid
+          title="Tecnologías destacadas"
+          note="Las que más he usado en producción. No son las únicas: me adapto a las que ya use tu equipo o a las que pida el proyecto."
+          items={techStack}
+        />
+        <TechGrid title="Infraestructura y herramientas destacadas" items={tools} />
       </Reveal>
     </section>
   );
