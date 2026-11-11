@@ -30,10 +30,10 @@ export function Hero() {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#proyectos" className="rounded-lg bg-accent px-5 py-3 text-sm font-bold text-white shadow-lg shadow-accent/25 transition hover:-translate-y-0.5 hover:bg-accent-2">
+            <a href="#proyectos" data-umami-event="inicio-ver-proyectos" className="rounded-lg bg-accent px-5 py-3 text-sm font-bold text-white shadow-lg shadow-accent/25 transition hover:-translate-y-0.5 hover:bg-accent-2">
               Ver proyectos
             </a>
-            <a href="#contacto" className="rounded-lg border border-line bg-surface/70 px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-accent-2">
+            <a href="#contacto" data-umami-event="inicio-contacto" className="rounded-lg border border-line bg-surface/70 px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-accent-2">
               Contáctame
             </a>
           </div>

@@ -19,6 +19,9 @@ export function Contact() {
               <li key={l.id}>
                 <a
                   href={l.href}
+                  data-umami-event="contacto"
+                  data-umami-event-canal={l.id}
+                  data-umami-event-lugar="seccion-contacto"
                   {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="group flex items-center gap-4 rounded-2xl border border-line bg-surface/80 p-5 transition hover:-translate-y-1 hover:border-accent-2 hover:shadow-lg hover:shadow-accent/20"
                 >

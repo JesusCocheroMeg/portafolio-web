@@ -24,6 +24,8 @@ jobs:
         env:
           # Variable del repo (Settings → Secrets and variables → Actions → Variables). "false" las apaga.
           NEXT_PUBLIC_SHOW_PROJECT_IMAGES: ${{ vars.SHOW_PROJECT_IMAGES }}
+          # ID público del sitio en Umami (variable del repo UMAMI_WEBSITE_ID). Sin valor = sin analítica.
+          NEXT_PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.UMAMI_WEBSITE_ID }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}

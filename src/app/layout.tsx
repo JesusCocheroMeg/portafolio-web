@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import Script from "next/script";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { ParticlesBackground } from "@/components/ParticlesBackground";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site } from "@/content/site";
+import { flags } from "@/lib/flags";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -37,6 +39,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <Footer />
         <WhatsAppButton />
+        {flags.umamiWebsiteId && (
+          // Analítica sin cookies. Solo cuenta en los dominios de producción.
+          <Script
+            src="https://cloud.umami.is/script.js"
+            data-website-id={flags.umamiWebsiteId}
+            data-domains="jesuscochero.dev,jesuscochero.web.app"
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );
