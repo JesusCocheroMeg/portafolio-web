@@ -1,0 +1,31 @@
+# Crea el tag vX.Y.Z y la Release en GitHub cuando la versión de package.json cambia en main.
+name: Crear versión
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Crear tag y Release si la versión es nueva
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="v$(node -p "require('./package.json').version")"
+          if git rev-parse -q --verify "refs/tags/$VERSION" >/dev/null; then
+            echo "La versión $VERSION ya existe: no se crea nada."
+            exit 0
+          fi
+          PREV=$(git describe --tags --abbrev=0 2>/dev/null || true)
+          ARGS=(--target "$GITHUB_SHA" --title "$VERSION" --generate-notes)
+          [ -n "$PREV" ] && ARGS+=(--notes-start-tag "$PREV")
+          gh release create "$VERSION" "${ARGS[@]}"
+          echo "Creada la versión $VERSION."
