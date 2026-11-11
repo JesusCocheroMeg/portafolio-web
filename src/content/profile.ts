@@ -11,7 +11,6 @@ export const profile = {
   stats: [
     { value: "+2,5 años", label: "de experiencia en empresas" },
     { value: "+6", label: "sistemas en producción" },
-    { value: "COP 8–11 M", label: "de ahorro al mes con Focus" },
     { value: "1", label: "producto con IA en camino: ARM" },
   ],
   photo: { src: "/jesus-cochero.webp", alt: "Jesús Cochero", width: 640, height: 800 },

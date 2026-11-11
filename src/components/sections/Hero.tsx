@@ -55,7 +55,7 @@ export function Hero() {
       </div>
 
       <Reveal delay={0.25}>
-        <dl className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-4">
+        <dl className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
           {profile.stats.map((s) => (
             <div key={s.label} className="flex flex-col-reverse gap-1 bg-surface/90 p-5 sm:p-6">
               <dt className="text-sm leading-snug text-muted">{s.label}</dt>
