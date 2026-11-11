@@ -39,6 +39,26 @@ export const companies: Company[] = [
         ],
       },
       {
+        name: "Conex · CRM para contact centers",
+        featured: true,
+        role: "Líder del producto",
+        summary:
+          "CRM a la medida para empresas de contact center: ventas por campañas, seguimiento de cada venta y reportes para toda la operación.",
+        highlight: "En producción desde 2025 · usado a diario por unos 200 asesores en dos turnos",
+        details: [
+          "CRM a la medida que MEG.IA ofrece a empresas de contact center. Organiza las ventas por campañas, con perfiles para asesores, supervisores, back office y administración; registra cada venta en un formulario guiado que evita errores y duplicados, y sigue su estado hasta que se activa, con actualización automática desde el servicio de portabilidad numérica.",
+          "Mi papel: lidero el producto —su desarrollo, el soporte y el equipo que trabaja en él—. Es uno de los productos insignia de la empresa, con varias licencias vendidas.",
+        ],
+        bullets: [
+          "Ventas por campañas con 6 perfiles de usuario",
+          "Registro guiado con control de duplicados",
+          "Seguimiento del estado de cada venta, con actualización automática",
+          "Cargas masivas desde Excel, reportes y tableros",
+          "Auditorías de calidad y PQR ligadas a cada venta",
+        ],
+        tech: ["React", "Node.js", "Express", "Sequelize"],
+      },
+      {
         name: "Portal de Clientes",
         featured: true,
         role: "Líder técnico y desarrollador principal",
