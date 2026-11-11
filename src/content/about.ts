@@ -8,11 +8,12 @@ export const quality = {
 
 export const adapt = {
   title: "Me adapto a lo que la empresa necesita",
-  intro: "Cada proyecto es una balanza entre lo que necesita y lo que cuesta.",
+  intro:
+    "Me preocupo por entender tu negocio, para recomendarte lo que de verdad te conviene. Cada proyecto es una balanza entre lo que necesita y lo que cuesta.",
   cases: [
     {
       title: "Trabajo con lo que ya usan",
-      text: "Si ya tienen infraestructura, como Vercel o Google Cloud, trabajo sobre ella. Si no la tienen, les recomiendo la mejor opción según mi experiencia y lo que necesite la plataforma. Y si la documentación vive en Notion, documento en Notion.",
+      text: "Si ya tienen infraestructura, como Vercel o Google Cloud, trabajo sobre ella. Si no la tienen, les recomiendo la mejor opción según mi experiencia y lo que necesite la plataforma. Lo mismo con sus herramientas: si documentan en Notion, por ejemplo, me adapto y trabajo ahí sin problema, aunque no sea la que más he usado.",
     },
     {
       title: "Si es una plataforma grande",
@@ -23,8 +24,8 @@ export const adapt = {
       text: "La infraestructura es más sencilla y el costo del proyecto baja mucho.",
     },
     {
-      title: "Si el presupuesto es ajustado",
-      text: "Se puede usar una infraestructura más sencilla y económica, empezar con las funciones esenciales y dejar el resto para después, o reducir la cantidad de pruebas. El trabajo sigue siendo profesional.",
+      title: "Si el presupuesto o el tiempo es ajustado",
+      text: "Se puede usar una infraestructura más sencilla y económica, empezar con las funciones esenciales y dejar el resto para después, o elegir herramientas más económicas que cumplan el mismo propósito, aunque sean menos potentes. El trabajo sigue siendo profesional.",
     },
   ],
   closing:
