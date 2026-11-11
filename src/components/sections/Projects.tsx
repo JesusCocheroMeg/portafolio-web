@@ -7,8 +7,8 @@ export function Projects() {
   return (
     <section id="proyectos" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
-        <SectionTitle eyebrow="Proyectos">
-          Lo que he <span className="text-accent-2">construido</span>
+        <SectionTitle eyebrow="Portafolio">
+          Proyectos <span className="text-accent-2">destacados</span>
         </SectionTitle>
       </Reveal>
 
