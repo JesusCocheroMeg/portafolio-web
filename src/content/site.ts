@@ -10,7 +10,7 @@ export const site = {
 export const sections = [
   { id: "inicio", label: "Inicio" },
   { id: "servicios", label: "Servicios" },
-  { id: "sobre-mi", label: "Sobre mí" },
   { id: "proyectos", label: "Proyectos" },
+  { id: "sobre-mi", label: "Sobre mí" },
   { id: "contacto", label: "Contacto" },
 ] as const;

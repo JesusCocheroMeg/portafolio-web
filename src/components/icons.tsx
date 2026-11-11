@@ -1,8 +1,8 @@
 import type { IconType } from "react-icons";
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import {
-  SiDocker, SiExpress, SiGit, SiGithub, SiGithubactions, SiGooglecloud, SiJavascript,
-  SiJsonwebtokens, SiMui, SiMysql, SiNatsdotio, SiNestjs, SiNextdotjs, SiNodedotjs, SiNotion,
+  SiCloudflare, SiDocker, SiExpress, SiGit, SiGithub, SiGithubactions, SiGooglecloud, SiJavascript,
+  SiJsonwebtokens, SiMui, SiMysql, SiNatsdotio, SiNestjs, SiNextdotjs, SiNodedotjs, SiResend,
   SiPostgresql, SiPrisma, SiReact, SiRedux, SiSequelize, SiTailwindcss, SiTypescript, SiVercel, SiVite,
 } from "react-icons/si";
 import type { TechName } from "@/content/about";
@@ -29,10 +29,11 @@ export const techIcons: Record<TechName, IconType> = {
   Docker: SiDocker,
   "Google Cloud": SiGooglecloud,
   Vercel: SiVercel,
+  Cloudflare: SiCloudflare,
+  Resend: SiResend,
   "GitHub Actions": SiGithubactions,
   Git: SiGit,
   GitHub: SiGithub,
-  Notion: SiNotion,
 };
 
 export const contactIcons: Record<ContactId, IconType> = {
