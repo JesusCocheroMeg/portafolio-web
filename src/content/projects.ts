@@ -51,10 +51,11 @@ export const companies: Company[] = [
       {
         name: "Enigma",
         role: "Colaborador",
-        summary: "Contact center con IA: campañas, marcación automática y agentes de voz 24/7.",
+        summary:
+          "Contact center con IA: campañas, marcación automática y agentes de voz 24/7. Mi aporte: sistema de tickets y facturación automática.",
         highlight: "2x en la productividad de los agentes, según MEG.IA",
         details: [
-          "Plataforma de contact center con IA: campañas de llamadas, marcación automática, supervisión en vivo y agentes de voz que atienden 24/7. 2x en la productividad de los agentes, según MEG.IA.",
+          "Plataforma de contact center con IA: campañas de llamadas, marcación automática, supervisión en vivo y agentes de voz que atienden 24/7. 2x en la productividad de los agentes, según MEG.IA. Ayudé a integrar el sistema de tickets y a automatizar la facturación.",
         ],
         link: { href: "https://megia.com.co/productos/enigma", label: "Ver producto" },
       },
