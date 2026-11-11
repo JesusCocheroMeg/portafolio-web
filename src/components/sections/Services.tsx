@@ -34,11 +34,6 @@ export function Services() {
                   </span>
                   <h3 className="mt-5 text-lg font-bold">{s.title}</h3>
                   <p className="mt-2 leading-relaxed text-muted">{s.text}</p>
-                  {"proof" in s && s.proof && (
-                    <p className="mt-auto pt-5 text-xs font-bold uppercase tracking-wider text-accent-2">
-                      Lo hice en: <span className="normal-case tracking-normal">{s.proof}</span>
-                    </p>
-                  )}
                 </article>
               </Reveal>
             </li>

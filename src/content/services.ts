@@ -9,19 +9,16 @@ export const services = {
       id: "custom",
       title: "Sistemas a la medida",
       text: "CRM, ERP y plataformas internas hechas para cómo trabaja tu empresa, no al revés. Dejas de pagar licencias de sistemas que no se ajustan.",
-      proof: "Focus · Nova",
     },
     {
       id: "ai",
       title: "Inteligencia artificial en tus procesos",
       text: "IA que registra, evalúa y sugiere: ventas que se llenan solas, llamadas auditadas, asistentes que atienden 24/7.",
-      proof: "ARM · Speech Analytics · Enigma",
     },
     {
       id: "automation",
       title: "Automatización de tareas",
       text: "Lo que hoy se hace a mano, hecho solo: facturación, reportes, cargas masivas desde Excel, recordatorios y seguimientos.",
-      proof: "Speech Analytics · Focus",
     },
     {
       id: "continue",
@@ -32,7 +29,6 @@ export const services = {
       id: "cloud",
       title: "Arquitectura y despliegue en la nube",
       text: "Sistemas seguros, rápidos y fáciles de mantener, desplegados en Google Cloud, Vercel o la infraestructura que ya uses.",
-      proof: "Nova",
     },
-  ] satisfies { id: ServiceId; title: string; text: string; proof?: string }[],
+  ] satisfies { id: ServiceId; title: string; text: string }[],
 };
