@@ -1,8 +1,20 @@
 # portafolio-web
 
-Portafolio de Jesús Cochero: https://jesuscochero.web.app
+Portafolio de Jesús Cochero: https://jesuscochero.dev
 
 Next.js (export estático) + Tailwind CSS, publicado en Firebase Hosting (Google Cloud).
+
+## Dominio
+
+`jesuscochero.dev` está registrado en Cloudflare y su DNS apunta a Firebase Hosting (registros en modo
+«DNS only», sin proxy). `www.jesuscochero.dev` redirige al dominio principal. `jesuscochero.web.app`
+sigue funcionando como dirección de Firebase.
+
+| Tipo | Nombre | Valor |
+|---|---|---|
+| A | `@` | `199.36.158.100` |
+| TXT | `@` | `hosting-site=jesuscochero` |
+| CNAME | `www` | `jesuscochero.web.app` |
 
 ## Desarrollo
 

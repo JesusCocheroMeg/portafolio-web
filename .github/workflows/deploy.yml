@@ -1,4 +1,4 @@
-# Publica el sitio en Firebase Hosting (https://jesuscochero.web.app) en cada push a main.
+# Publica el sitio en Firebase Hosting (https://jesuscochero.dev) en cada push a main.
 name: Publicar en Firebase
 
 on:
