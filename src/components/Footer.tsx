@@ -18,6 +18,9 @@ export function Footer() {
                 <a
                   href={l.href}
                   aria-label={l.label}
+                  data-umami-event="contacto"
+                  data-umami-event-canal={l.id}
+                  data-umami-event-lugar="pie"
                   {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="grid h-9 w-9 place-items-center rounded-full transition hover:bg-surface-2 hover:text-accent-2"
                 >

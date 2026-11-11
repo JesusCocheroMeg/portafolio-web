@@ -63,17 +63,30 @@ export function ProjectCard({ project }: { project: Project }) {
             aria-expanded={open}
             aria-controls={detailsId}
             onClick={() => setOpen((v) => !v)}
+            data-umami-event={open ? undefined : "proyecto-ver-mas"}
+            data-umami-event-proyecto={project.name}
             className="text-accent-2 hover:text-ink"
           >
             {open ? "Ver menos" : "Ver más"}
           </button>
           {images.length > 0 && (
-            <button type="button" onClick={() => setGalleryOpen(true)} className="text-muted hover:text-ink">
+            <button
+              type="button"
+              onClick={() => setGalleryOpen(true)}
+              data-umami-event="proyecto-ver-capturas"
+              data-umami-event-proyecto={project.name}
+              className="text-muted hover:text-ink">
               Ver capturas ({images.length}) ↗
             </button>
           )}
           {project.link && (
-            <a href={project.link.href} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-ink">
+            <a
+              href={project.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-umami-event="proyecto-ver-producto"
+              data-umami-event-proyecto={project.name}
+              className="text-muted hover:text-ink">
               {project.link.label} ↗
             </a>
           )}
