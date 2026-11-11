@@ -3,7 +3,7 @@ import { FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import {
   SiDocker, SiExpress, SiGit, SiGithub, SiGithubactions, SiGooglecloud, SiJavascript,
   SiJsonwebtokens, SiMui, SiMysql, SiNatsdotio, SiNestjs, SiNextdotjs, SiNodedotjs, SiNotion,
-  SiPrisma, SiReact, SiRedux, SiSequelize, SiTypescript, SiVercel, SiVite,
+  SiPostgresql, SiPrisma, SiReact, SiRedux, SiSequelize, SiTailwindcss, SiTypescript, SiVercel, SiVite,
 } from "react-icons/si";
 import type { TechName } from "@/content/about";
 import type { ContactId } from "@/content/contact";
@@ -15,6 +15,7 @@ export const techIcons: Record<TechName, IconType> = {
   "Next.js": SiNextdotjs,
   Redux: SiRedux,
   "Material UI": SiMui,
+  "Tailwind CSS": SiTailwindcss,
   Vite: SiVite,
   "Node.js": SiNodedotjs,
   Express: SiExpress,
@@ -23,6 +24,7 @@ export const techIcons: Record<TechName, IconType> = {
   Prisma: SiPrisma,
   Sequelize: SiSequelize,
   MySQL: SiMysql,
+  PostgreSQL: SiPostgresql,
   JWT: SiJsonwebtokens,
   Docker: SiDocker,
   "Google Cloud": SiGooglecloud,

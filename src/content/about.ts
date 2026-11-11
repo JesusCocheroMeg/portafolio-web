@@ -30,10 +30,10 @@ export const adapt = {
     "Cómo empiezo depende del caso y del contexto. En un proyecto nuevo, primero hago un diagnóstico: ahí se mide cuántos usuarios se esperan y qué necesita de verdad la plataforma. Si el proyecto ya está en marcha, me sumo a lo que existe y reviso solo lo necesario para continuar. Así la balanza queda en el punto correcto.",
 } as const;
 
-// Tecnologías de Focus y Nova (contenido/proyectos.md) e infraestructura de «Me adapto».
+// Tecnologías de Focus, Nova y el Portal de Clientes (contenido/proyectos.md) e infraestructura de «Me adapto».
 export const techStack = [
-  "TypeScript", "JavaScript", "React", "Next.js", "Redux", "Material UI", "Vite",
-  "Node.js", "Express", "NestJS", "NATS", "Prisma", "Sequelize", "MySQL", "JWT", "Docker",
+  "TypeScript", "JavaScript", "React", "Next.js", "Redux", "Material UI", "Tailwind CSS", "Vite",
+  "Node.js", "Express", "NestJS", "NATS", "Prisma", "Sequelize", "MySQL", "PostgreSQL", "JWT", "Docker",
 ] as const;
 
 export const tools = [

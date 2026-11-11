@@ -39,6 +39,26 @@ export const companies: Company[] = [
         ],
       },
       {
+        name: "Portal de Clientes",
+        featured: true,
+        role: "Líder técnico y desarrollador principal",
+        summary:
+          "Portal donde los clientes de una empresa de software consultan sus servicios, piden soporte y siguen su consumo y facturación, todo en un solo lugar.",
+        highlight: "En producción desde septiembre de 2026",
+        details: [
+          "Plataforma web que reúne en un solo lugar la relación entre una empresa de software y sus clientes. Cada cliente entra con su cuenta, ve los servicios que tiene contratados, consulta su consumo y sus facturas, y abre solicitudes de soporte con seguimiento de tiempos de respuesta. El equipo interno administra clientes, usuarios, permisos, catálogo de productos y reportes exportables.",
+          "Mi papel: diseñé y construí la mayor parte de la plataforma —catálogo de servicios, contratación por cliente, facturación integrada con el consumo, reportes a Excel y control de roles y permisos—, desde el prototipo y el MVP hasta producción, y lideré la organización del proyecto.",
+        ],
+        bullets: [
+          "Cada empresa entra con su cuenta y ve solo su información",
+          "Servicios contratados, consumo y facturación",
+          "Solicitudes de soporte con control de tiempos de respuesta",
+          "Reportes exportables a Excel",
+          "Roles y permisos configurables",
+        ],
+        tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "NestJS", "Prisma", "PostgreSQL", "Docker"],
+      },
+      {
         name: "Speech Analytics",
         role: "Colaborador",
         summary:
