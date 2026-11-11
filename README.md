@@ -13,6 +13,19 @@ npm run lint
 npm run build   # genera out/
 ```
 
+## Cómo se trabaja
+
+`main` está protegida: no acepta push directo. Todo cambio entra por Pull Request y solo se puede
+fusionar si pasa la revisión automática (`preview`: lint, build y vista previa).
+
+```bash
+git switch -c feat/mi-cambio
+# ...cambios...
+git commit -am "feat: describe el cambio"
+git push -u origin feat/mi-cambio
+gh pr create --fill
+```
+
 ## Publicación
 
 - **Automática:** cada push a `main` construye y publica el sitio (`.github/workflows/deploy.yml`).
