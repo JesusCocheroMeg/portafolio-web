@@ -1,8 +1,9 @@
 import type { IconType } from "react-icons";
 import { FaCloud, FaCogs, FaCubes, FaHandsHelping, FaRobot } from "react-icons/fa";
 import { Reveal } from "@/components/Reveal";
-import { SectionTitle } from "@/components/SectionTitle";
-import { services, type ServiceId } from "@/content/services";
+import { Highlight, SectionTitle } from "@/components/SectionTitle";
+import { getContent, type Lang } from "@/content";
+import type { ServiceId } from "@/content/types";
 
 const icons: Record<ServiceId, IconType> = {
   custom: FaCubes,
@@ -12,12 +13,13 @@ const icons: Record<ServiceId, IconType> = {
   cloud: FaCloud,
 };
 
-export function Services() {
+export function Services({ lang }: { lang: Lang }) {
+  const { services, ui } = getContent(lang);
   return (
     <section id="servicios" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
-        <SectionTitle eyebrow="Servicios">
-          Qué puedo hacer por <span className="text-accent-2">tu empresa</span>
+        <SectionTitle eyebrow={ui.headings.services.eyebrow}>
+          <Highlight heading={ui.headings.services.title} />
         </SectionTitle>
         <p className="-mt-6 max-w-2xl text-lg text-muted">{services.intro}</p>
       </Reveal>

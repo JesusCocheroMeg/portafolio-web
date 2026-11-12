@@ -1,14 +1,14 @@
 import { Reveal } from "@/components/Reveal";
-import { SectionTitle } from "@/components/SectionTitle";
-import { adapt, quality } from "@/content/about";
-import { career } from "@/content/career";
+import { Highlight, SectionTitle } from "@/components/SectionTitle";
+import { getContent, type Lang } from "@/content";
 
-export function About() {
+export function About({ lang }: { lang: Lang }) {
+  const { adapt, quality, career, ui } = getContent(lang);
   return (
     <section id="sobre-mi" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
-        <SectionTitle eyebrow="Sobre mí">
-          Cómo <span className="text-accent-2">trabajo</span>
+        <SectionTitle eyebrow={ui.headings.about.eyebrow}>
+          <Highlight heading={ui.headings.about.title} />
         </SectionTitle>
       </Reveal>
 
@@ -44,7 +44,7 @@ export function About() {
       </Reveal>
 
       <Reveal className="mt-20">
-        <h3 className="text-2xl font-bold">Trayectoria</h3>
+        <h3 className="text-2xl font-bold">{ui.about.career}</h3>
         <ol className="relative mt-8 space-y-8 border-l border-line pl-8">
           {career.map((c) => (
             <li key={c.period} className="relative">
@@ -59,7 +59,7 @@ export function About() {
               <p className="text-sm font-bold text-accent-2">
                 {c.period}
                 <span className="ml-2 rounded-full border border-line px-2 py-0.5 text-xs font-semibold text-muted">
-                  {c.kind === "trabajo" ? "Trabajo" : "Estudio"}
+                  {c.kind === "trabajo" ? ui.about.work : ui.about.study}
                 </span>
               </p>
               <h4 className="mt-1 text-lg font-bold">{c.title}</h4>

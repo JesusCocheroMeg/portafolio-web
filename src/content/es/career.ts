@@ -1,14 +1,7 @@
 // Fuente: centro/contenido/sobre-mi.md, sección Trayectoria (F13, DEC-06).
-export type CareerItem = {
-  period: string;
-  title: string;
-  place: string;
-  text: string;
-  kind: "trabajo" | "estudio";
-  current?: boolean;
-};
+import type { CareerItem } from "../types";
 
-export const career: CareerItem[] = [
+export const career: readonly CareerItem[] = [
   {
     period: "may 2026 – hoy",
     title: "Desarrollador Semi Senior",

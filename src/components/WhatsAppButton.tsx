@@ -1,8 +1,9 @@
 import { FaWhatsapp } from "react-icons/fa";
-import { whatsappFloat } from "@/content/contact";
+import { getContent, type Lang } from "@/content";
 
 /** Botón fijo en la esquina inferior derecha. Verde WhatsApp para que se reconozca al instante. */
-export function WhatsAppButton() {
+export function WhatsAppButton({ lang }: { lang: Lang }) {
+  const { whatsappFloat } = getContent(lang);
   return (
     <a
       href={whatsappFloat.href}

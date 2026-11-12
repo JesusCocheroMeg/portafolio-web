@@ -5,8 +5,8 @@ import {
   SiJsonwebtokens, SiMui, SiMysql, SiNatsdotio, SiNestjs, SiNextdotjs, SiNodedotjs, SiResend,
   SiPostgresql, SiPrisma, SiReact, SiRedux, SiSequelize, SiTailwindcss, SiTypescript, SiVercel, SiVite,
 } from "react-icons/si";
-import type { TechName } from "@/content/about";
-import type { ContactId } from "@/content/contact";
+import type { TechName } from "@/content/tech";
+import type { ContactId } from "@/content/types";
 
 export const techIcons: Record<TechName, IconType> = {
   TypeScript: SiTypescript,

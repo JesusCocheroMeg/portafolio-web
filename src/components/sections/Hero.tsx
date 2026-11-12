@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { Typewriter } from "@/components/Typewriter";
-import { profile } from "@/content/profile";
-import { site } from "@/content/site";
+import { getContent, type Lang } from "@/content";
 
-export function Hero() {
+export function Hero({ lang }: { lang: Lang }) {
+  const { profile, site, ui } = getContent(lang);
   return (
     <section id="inicio" className="mx-auto max-w-6xl px-4 pb-16 pt-28 sm:px-6">
       <div className="grid min-h-[calc(100svh-11rem)] items-center gap-12 md:grid-cols-[1.25fr_1fr]">
@@ -21,7 +21,7 @@ export function Hero() {
           <p className="mt-6 max-w-xl text-xl font-semibold leading-snug">{site.headline}</p>
           <p className="mt-3 max-w-xl text-base leading-relaxed text-muted">{site.description}</p>
 
-          <ul className="mt-6 flex flex-wrap gap-2" aria-label="Etapas que cubro">
+          <ul className="mt-6 flex flex-wrap gap-2" aria-label={ui.hero.stagesLabel}>
             {profile.stages.map((s) => (
               <li key={s} className="rounded-full border border-line bg-surface/70 px-3 py-1 text-xs font-semibold text-muted">
                 {s}
@@ -31,10 +31,10 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#proyectos" data-umami-event="inicio-ver-proyectos" className="rounded-lg bg-accent px-5 py-3 text-sm font-bold text-white shadow-lg shadow-accent/25 transition hover:-translate-y-0.5 hover:bg-accent-2">
-              Ver proyectos
+              {ui.hero.seeProjects}
             </a>
             <a href="#contacto" data-umami-event="inicio-contacto" className="rounded-lg border border-line bg-surface/70 px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-accent-2">
-              Contáctame
+              {ui.hero.contactMe}
             </a>
           </div>
         </Reveal>

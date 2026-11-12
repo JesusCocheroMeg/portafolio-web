@@ -1,22 +1,7 @@
 // Fuente: centro/contenido/proyectos.md (DEC-06). ARM entra por decisión de Jesús (DEC-08).
-export type Project = {
-  name: string;
-  role: string;
-  summary: string;
-  highlight?: string;
-  details: string[];
-  bullets?: string[];
-  tech?: string[];
-  link?: { href: string; label: string };
-  /** Ocupa todo el ancho de la fila. */
-  featured?: boolean;
-  /** Capturas en `public/proyectos/`. La primera es la portada. Se ocultan con NEXT_PUBLIC_SHOW_PROJECT_IMAGES=false. */
-  images?: { src: string; alt: string }[];
-};
+import type { Company } from "../types";
 
-export type Company = { name: string; note: string; projects: Project[] };
-
-export const companies: Company[] = [
+export const companies: readonly Company[] = [
   {
     name: "MEG.IA",
     note: "may 2026 – hoy",

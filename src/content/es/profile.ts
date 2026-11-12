@@ -1,5 +1,7 @@
 // Fuente: centro/contenido/sobre-mi.md (DEC-06). Si difieren, gana el contenido.
-export const profile = {
+import type { Profile } from "../types";
+
+export const profile: Profile = {
   greeting: "¡Hola! Soy",
   roles: [
     "Desarrollador full stack",
@@ -14,4 +16,4 @@ export const profile = {
     { value: "1", label: "producto con IA en camino: ARM" },
   ],
   photo: { src: "/jesus-cochero.webp", alt: "Jesús Cochero", width: 640, height: 800 },
-} as const;
+};

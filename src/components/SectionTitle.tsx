@@ -1,3 +1,16 @@
+import type { Heading } from "@/content/types";
+
+/** Pinta un título con su parte resaltada en azul. */
+export function Highlight({ heading: [before, mark, after] }: { heading: Heading }) {
+  return (
+    <>
+      {before}
+      <span className="text-accent-2">{mark}</span>
+      {after}
+    </>
+  );
+}
+
 export function SectionTitle({ eyebrow, children }: { eyebrow: string; children: React.ReactNode }) {
   return (
     <div className="mb-12">

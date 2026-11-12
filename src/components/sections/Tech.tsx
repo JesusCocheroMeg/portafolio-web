@@ -1,7 +1,8 @@
 import { Reveal } from "@/components/Reveal";
-import { SectionTitle } from "@/components/SectionTitle";
+import { Highlight, SectionTitle } from "@/components/SectionTitle";
 import { techIcons } from "@/components/icons";
-import { techStack, tools, type TechName } from "@/content/about";
+import { getContent, type Lang } from "@/content";
+import { techStack, tools, type TechName } from "@/content/tech";
 
 function TechGrid({ title, note, items }: { title: string; note?: string; items: readonly TechName[] }) {
   return (
@@ -26,22 +27,23 @@ function TechGrid({ title, note, items }: { title: string; note?: string; items:
   );
 }
 
-export function Tech() {
+export function Tech({ lang }: { lang: Lang }) {
+  const { ui } = getContent(lang);
   return (
     <section id="tecnologias" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
-        <SectionTitle eyebrow="Tecnologías">
-          Con qué <span className="text-accent-2">construyo</span>
+        <SectionTitle eyebrow={ui.headings.tech.eyebrow}>
+          <Highlight heading={ui.headings.tech.title} />
         </SectionTitle>
       </Reveal>
 
       <Reveal className="space-y-12">
         <TechGrid
-          title="Tecnologías destacadas"
-          note="Las que más he usado en producción. No son las únicas: me adapto a las que ya use tu equipo o a las que pida el proyecto, siempre que estén a mi alcance. Si algo está muy lejos de lo que domino, te lo digo desde el principio."
+          title={ui.tech.featured}
+          note={ui.tech.note}
           items={techStack}
         />
-        <TechGrid title="Infraestructura y herramientas destacadas" items={tools} />
+        <TechGrid title={ui.tech.tools} items={tools} />
       </Reveal>
     </section>
   );

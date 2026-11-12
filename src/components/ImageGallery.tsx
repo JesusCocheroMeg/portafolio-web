@@ -2,14 +2,25 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import type { Ui } from "@/content/types";
 
-type Image = { src: string; alt: string };
+type Image = { readonly src: string; readonly alt: string };
 
 /**
  * Galería a pantalla completa: imagen grande, flechas, miniaturas y teclado (← → Esc).
  * Se monta en <body> para que la inclinación de la tarjeta no la deforme.
  */
-export function ImageGallery({ title, images, onClose }: { title: string; images: Image[]; onClose: () => void }) {
+export function ImageGallery({
+  title,
+  images,
+  labels,
+  onClose,
+}: {
+  title: string;
+  images: readonly Image[];
+  labels: Ui["gallery"];
+  onClose: () => void;
+}) {
   const [index, setIndex] = useState(0);
   const closeRef = useRef<HTMLButtonElement>(null);
   const touchX = useRef<number | null>(null);
@@ -38,13 +49,13 @@ export function ImageGallery({ title, images, onClose }: { title: string; images
     <div
       role="dialog"
       aria-modal="true"
-      aria-label={`Capturas de ${title}`}
+      aria-label={labels.dialog.replace("{title}", title)}
       className="fixed inset-0 z-[100] flex flex-col bg-page/95 backdrop-blur-md"
       onClick={onClose}
     >
       <header className="flex items-center justify-between gap-4 px-4 py-4 sm:px-8" onClick={(e) => e.stopPropagation()}>
         <div className="min-w-0">
-          <p className="text-xs font-bold uppercase tracking-wider text-accent-2">Capturas</p>
+          <p className="text-xs font-bold uppercase tracking-wider text-accent-2">{labels.eyebrow}</p>
           <h2 className="truncate text-lg font-extrabold sm:text-xl">{title}</h2>
         </div>
         <div className="flex items-center gap-4">
@@ -55,7 +66,7 @@ export function ImageGallery({ title, images, onClose }: { title: string; images
             ref={closeRef}
             type="button"
             onClick={onClose}
-            aria-label="Cerrar"
+            aria-label={labels.close}
             className="grid size-10 place-items-center rounded-full border border-line text-xl text-muted transition hover:border-accent-2 hover:text-ink"
           >
             ×
@@ -85,7 +96,7 @@ export function ImageGallery({ title, images, onClose }: { title: string; images
             <button
               type="button"
               onClick={() => go(-1)}
-              aria-label="Anterior"
+              aria-label={labels.prev}
               className="absolute left-2 top-1/2 hidden size-11 -translate-y-1/2 place-items-center rounded-full border border-line bg-surface/90 text-xl text-ink transition hover:border-accent-2 sm:left-6 sm:grid"
             >
               ‹
@@ -93,7 +104,7 @@ export function ImageGallery({ title, images, onClose }: { title: string; images
             <button
               type="button"
               onClick={() => go(1)}
-              aria-label="Siguiente"
+              aria-label={labels.next}
               className="absolute right-2 top-1/2 hidden size-11 -translate-y-1/2 place-items-center rounded-full border border-line bg-surface/90 text-xl text-ink transition hover:border-accent-2 sm:right-6 sm:grid"
             >
               ›
@@ -111,7 +122,7 @@ export function ImageGallery({ title, images, onClose }: { title: string; images
                 <button
                   type="button"
                   onClick={() => setIndex(i)}
-                  aria-label={`Ver captura ${i + 1}`}
+                  aria-label={labels.view.replace("{n}", String(i + 1))}
                   aria-current={i === index}
                   className={`block overflow-hidden rounded-lg border-2 transition ${i === index ? "border-accent-2" : "border-transparent opacity-50 hover:opacity-100"}`}
                 >

@@ -1,9 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { sections, site } from "@/content/site";
+import type { Lang, Section, Ui } from "@/content/types";
+import { saveLang } from "@/lib/lang";
 
-export function Navbar() {
+type Props = {
+  name: string;
+  sections: readonly Section[];
+  labels: Ui["nav"];
+  /** Idioma al que lleva el selector y su ruta de inicio. */
+  other: { lang: Lang; href: string };
+};
+
+export function Navbar({ name, sections, labels, other }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -30,7 +39,7 @@ export function Navbar() {
       }`}
     >
       <nav
-        aria-label="Principal"
+        aria-label={labels.label}
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6"
       >
         <a
@@ -39,7 +48,7 @@ export function Navbar() {
           onClick={() => setOpen(false)}
         >
           <span className="text-accent-2">J</span>C
-          <span className="sr-only"> — {site.name}, ir al inicio</span>
+          <span className="sr-only"> — {name}, {labels.goHome}</span>
         </a>
 
         <ul className="hidden gap-8 md:flex">
@@ -55,12 +64,33 @@ export function Navbar() {
           ))}
         </ul>
 
+        <div className="flex items-center gap-2">
+        <a
+          href={other.href}
+          hrefLang={other.lang}
+          lang={other.lang}
+          aria-label={labels.switchLabel}
+          title={labels.switchLabel}
+          data-umami-event="cambiar-idioma"
+          data-umami-event-idioma={other.lang}
+          onClick={(e) => {
+            saveLang(other.lang);
+            // Conserva la sección en la que está (#proyectos, #contacto…).
+            if (location.hash) {
+              e.preventDefault();
+              location.href = other.href + location.hash;
+            }
+          }}
+          className="rounded-md border border-line px-2.5 py-1 text-xs font-bold text-muted transition hover:border-accent-2 hover:text-ink"
+        >
+          {labels.switchTo}
+        </a>
         <button
           type="button"
           className="-mr-2 rounded-md p-2 text-ink md:hidden"
           aria-expanded={open}
           aria-controls="menu-movil"
-          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-label={open ? labels.closeMenu : labels.openMenu}
           onClick={() => setOpen((v) => !v)}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -72,6 +102,7 @@ export function Navbar() {
             )}
           </svg>
         </button>
+        </div>
       </nav>
 
       {open && (

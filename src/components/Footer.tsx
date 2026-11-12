@@ -1,11 +1,11 @@
 import { contactIcons } from "@/components/icons";
-import { contact } from "@/content/contact";
-import { site } from "@/content/site";
+import { getContent, type Lang } from "@/content";
 import { version } from "../../package.json";
 
 const RELEASES_URL = "https://github.com/JesusCocheroMeg/portafolio-web/releases";
 
-export function Footer() {
+export function Footer({ lang }: { lang: Lang }) {
+  const { contact, site, ui } = getContent(lang);
   return (
     <footer className="relative z-10 border-t border-line bg-page/80">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 pb-24 pt-6 text-sm text-muted sm:flex-row sm:justify-between sm:px-6">
@@ -15,7 +15,7 @@ export function Footer() {
             href={`${RELEASES_URL}/tag/v${version}`}
             target="_blank"
             rel="noopener noreferrer"
-            title="Ver qué cambió en esta versión"
+            title={ui.footer.versionTitle}
             className="font-mono text-xs transition hover:text-accent-2"
           >
             v{version}
