@@ -4,7 +4,7 @@ export const contact = {
   text: "Cuéntame qué necesitas y vemos juntos el punto correcto de la balanza entre lo que necesita y lo que cuesta.",
   links: [
     { id: "email", label: "Correo", value: "jesus3928cf@gmail.com", href: "mailto:jesus3928cf@gmail.com" },
-    { id: "whatsapp", label: "WhatsApp", value: "323 525 2137", href: "https://wa.me/573235252137" },
+    { id: "whatsapp", label: "WhatsApp", value: "304 468 5281", href: "https://wa.me/573044685281" },
     { id: "github", label: "GitHub", value: "JesusCocheroMeg", href: "https://github.com/JesusCocheroMeg" },
     { id: "linkedin", label: "LinkedIn", value: "jesus-cf", href: "https://www.linkedin.com/in/jesus-cf-494502272/" },
   ],
@@ -13,7 +13,7 @@ export const contact = {
 // Botón flotante (F14): abre WhatsApp con un mensaje ya escrito.
 export const whatsappFloat = {
   label: "Escríbeme por WhatsApp",
-  href: `https://wa.me/573235252137?text=${encodeURIComponent(
+  href: `https://wa.me/573044685281?text=${encodeURIComponent(
     "Hola Jesús, vi tu portafolio y me gustaría hablar contigo sobre un proyecto.",
   )}`,
 };
