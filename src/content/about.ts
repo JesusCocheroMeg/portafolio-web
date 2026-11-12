@@ -13,7 +13,11 @@ export const adapt = {
   cases: [
     {
       title: "Trabajo con lo que ya usan",
-      text: "Si ya tienen infraestructura, como Vercel o Google Cloud, trabajo sobre ella. Si no la tienen, les recomiendo la mejor opción según mi experiencia y lo que necesite la plataforma. Lo mismo con sus herramientas: si documentan en Notion, por ejemplo, me adapto y trabajo ahí sin problema, aunque no sea la que más he usado.",
+      text: "Si ya tienen infraestructura, como Vercel o Google Cloud, trabajo sobre ella. Si no la tienen, les recomiendo la mejor opción según mi experiencia y lo que necesite la plataforma. Lo mismo con sus herramientas: si documentan en Notion, por ejemplo, me adapto y trabajo ahí sin problema, aunque no sea la que más he usado. Y si usan algo que no conozco, primero hago una revisión a fondo para entender cómo está montado; si hace falta, me apoyo en un especialista en esa tecnología para que el desarrollo no se detenga.",
+    },
+    {
+      title: "Si el presupuesto o el tiempo es ajustado",
+      text: "Se puede usar una infraestructura más sencilla y económica, empezar con las funciones esenciales y dejar el resto para después, o elegir herramientas más económicas que cumplan el mismo propósito, aunque sean menos potentes. El trabajo sigue siendo profesional.",
     },
     {
       title: "Si es una plataforma grande",
@@ -22,10 +26,6 @@ export const adapt = {
     {
       title: "Si son pocos usuarios",
       text: "La infraestructura es más sencilla y el costo del proyecto baja mucho.",
-    },
-    {
-      title: "Si el presupuesto o el tiempo es ajustado",
-      text: "Se puede usar una infraestructura más sencilla y económica, empezar con las funciones esenciales y dejar el resto para después, o elegir herramientas más económicas que cumplan el mismo propósito, aunque sean menos potentes. El trabajo sigue siendo profesional.",
     },
   ],
   closing:
