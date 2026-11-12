@@ -6,7 +6,7 @@ const label = { email: "Email", whatsapp: "WhatsApp", github: "GitHub", linkedin
 
 export const contact: Contact = {
   title: "Shall we talk about your project?",
-  text: "Tell me what you need and together we'll find the right balance between what it needs and what it costs. I work in Spanish, and in English in writing.",
+  text: "Tell me what you need and together we'll find the right balance between what it needs and what it costs. Happy to work with you in English by email or chat.",
   // Mismos datos que en español; solo cambian las etiquetas.
   links: es.links.map((l) => ({ ...l, label: label[l.id] })),
 };
