@@ -38,7 +38,7 @@ export function Tech() {
       <Reveal className="space-y-12">
         <TechGrid
           title="Tecnologías destacadas"
-          note="Las que más he usado en producción. No son las únicas: me adapto a las que ya use tu equipo o a las que pida el proyecto."
+          note="Las que más he usado en producción. No son las únicas: me adapto a las que ya use tu equipo o a las que pida el proyecto, siempre que estén a mi alcance. Si algo está muy lejos de lo que domino, te lo digo desde el principio."
           items={techStack}
         />
         <TechGrid title="Infraestructura y herramientas destacadas" items={tools} />
