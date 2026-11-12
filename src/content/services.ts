@@ -28,7 +28,7 @@ export const services = {
     {
       id: "cloud",
       title: "Arquitectura y despliegue en la nube",
-      text: "Sistemas seguros, rápidos y fáciles de mantener, desplegados en Google Cloud, Vercel o la infraestructura que ya uses.",
+      text: "Sistemas seguros, rápidos y fáciles de mantener, desplegados en Google Cloud, Vercel o la infraestructura que ya uses, si está a mi alcance; si no, te lo digo desde el principio.",
     },
   ] satisfies { id: ServiceId; title: string; text: string }[],
 };
