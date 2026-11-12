@@ -17,7 +17,7 @@ export const adapt = {
     },
     {
       title: "Si el presupuesto o el tiempo es ajustado",
-      text: "Se puede usar una infraestructura más sencilla y económica, empezar con las funciones esenciales y dejar el resto para después, o elegir herramientas más económicas que cumplan el mismo propósito, aunque sean menos potentes. El trabajo sigue siendo profesional.",
+      text: "Te propongo alternativas más sencillas y económicas: una infraestructura más simple, empezar con las funciones esenciales y dejar el resto para después, o usar herramientas que ya existen y cumplen el mismo propósito, aunque sean menos potentes. Revisamos juntos qué se puede lograr con el tiempo y el presupuesto que hay. El trabajo sigue siendo profesional.",
     },
     {
       title: "Si es una plataforma grande",
