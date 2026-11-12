@@ -1,13 +1,14 @@
 import { Reveal } from "@/components/Reveal";
 import { SectionTitle } from "@/components/SectionTitle";
 import { contactIcons } from "@/components/icons";
-import { contact } from "@/content/contact";
+import { getContent, type Lang } from "@/content";
 
-export function Contact() {
+export function Contact({ lang }: { lang: Lang }) {
+  const { contact, ui } = getContent(lang);
   return (
     <section id="contacto" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
-        <SectionTitle eyebrow="Contacto">{contact.title}</SectionTitle>
+        <SectionTitle eyebrow={ui.headings.contact.eyebrow}>{contact.title}</SectionTitle>
         <p className="-mt-6 max-w-2xl text-lg text-muted">{contact.text}</p>
       </Reveal>
       <Reveal className="mt-10">

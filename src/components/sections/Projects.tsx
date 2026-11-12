@@ -1,14 +1,15 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
-import { SectionTitle } from "@/components/SectionTitle";
-import { companies } from "@/content/projects";
+import { Highlight, SectionTitle } from "@/components/SectionTitle";
+import { getContent, type Lang } from "@/content";
 
-export function Projects() {
+export function Projects({ lang }: { lang: Lang }) {
+  const { companies, ui } = getContent(lang);
   return (
     <section id="proyectos" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
-        <SectionTitle eyebrow="Portafolio">
-          Proyectos <span className="text-accent-2">destacados</span>
+        <SectionTitle eyebrow={ui.headings.projects.eyebrow}>
+          <Highlight heading={ui.headings.projects.title} />
         </SectionTitle>
       </Reveal>
 
@@ -24,7 +25,7 @@ export function Projects() {
               {c.projects.map((p, i) => (
                 <li key={p.name} className={`h-full ${p.featured ? "md:col-span-2" : ""}`}>
                   <Reveal delay={i * 0.1} className="h-full">
-                    <ProjectCard project={p} />
+                    <ProjectCard project={p} labels={ui.project} galleryLabels={ui.gallery} />
                   </Reveal>
                 </li>
               ))}

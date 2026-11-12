@@ -1,16 +1,20 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { site } from "@/content/site";
+import { getContent, type Lang } from "@/content";
 
-export const alt = `${site.name} — ${site.headline}`;
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
-export const dynamic = "force-static";
+// Imagen para compartir en redes (Open Graph), una por idioma.
+export const ogSize = { width: 1200, height: 630 };
+
+export function ogAlt(lang: Lang) {
+  const { site } = getContent(lang);
+  return `${site.name} — ${site.headline}`;
+}
 
 const fontDir = join(process.cwd(), "node_modules/@fontsource/manrope/files");
 
-export default async function Image() {
+export async function renderOgImage(lang: Lang) {
+  const { site } = getContent(lang);
   const [bold, medium] = await Promise.all([
     readFile(join(fontDir, "manrope-latin-800-normal.woff")),
     readFile(join(fontDir, "manrope-latin-500-normal.woff")),
@@ -41,7 +45,7 @@ export default async function Image() {
       </div>
     ),
     {
-      ...size,
+      ...ogSize,
       fonts: [
         { name: "Manrope", data: bold, weight: 800, style: "normal" },
         { name: "Manrope", data: medium, weight: 500, style: "normal" },

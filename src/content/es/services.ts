@@ -1,8 +1,7 @@
 // Fuente: centro/contenido/sobre-mi.md, «Qué puedo hacer por tu empresa» (F16, DEC-06).
-export type ServiceId = "custom" | "ai" | "automation" | "continue" | "cloud";
+import type { Services } from "../types";
 
-export const services = {
-  title: "Qué puedo hacer por tu empresa",
+export const services: Services = {
   intro: "Construyo sistemas que resuelven problemas reales de la operación y que se pagan solos.",
   items: [
     {
@@ -30,5 +29,5 @@ export const services = {
       title: "Arquitectura y despliegue en la nube",
       text: "Sistemas seguros, rápidos y fáciles de mantener, desplegados en Google Cloud, Vercel o la infraestructura que ya uses, si está a mi alcance; si no, te lo digo desde el principio.",
     },
-  ] satisfies { id: ServiceId; title: string; text: string }[],
+  ],
 };

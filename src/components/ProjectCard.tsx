@@ -2,11 +2,19 @@
 
 import { useId, useState } from "react";
 import Tilt from "react-parallax-tilt";
-import type { Project } from "@/content/projects";
+import type { Project, Ui } from "@/content/types";
 import { flags } from "@/lib/flags";
 import { ImageGallery } from "@/components/ImageGallery";
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({
+  project,
+  labels,
+  galleryLabels,
+}: {
+  project: Project;
+  labels: Ui["project"];
+  galleryLabels: Ui["gallery"];
+}) {
   const [open, setOpen] = useState(false);
   const detailsId = useId();
   const images = flags.showProjectImages ? (project.images ?? []) : [];
@@ -48,7 +56,7 @@ export function ProjectCard({ project }: { project: Project }) {
         )}
 
         {project.tech && (
-          <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Tecnologías">
+          <ul className="mt-4 flex flex-wrap gap-1.5" aria-label={labels.tech}>
             {project.tech.map((t) => (
               <li key={t} className="rounded-md border border-line px-2 py-0.5 text-xs font-semibold text-muted">
                 {t}
@@ -67,7 +75,7 @@ export function ProjectCard({ project }: { project: Project }) {
             data-umami-event-proyecto={project.name}
             className="text-accent-2 hover:text-ink"
           >
-            {open ? "Ver menos" : "Ver más"}
+            {open ? labels.less : labels.more}
           </button>
           {images.length > 0 && (
             <button
@@ -76,7 +84,7 @@ export function ProjectCard({ project }: { project: Project }) {
               data-umami-event="proyecto-ver-capturas"
               data-umami-event-proyecto={project.name}
               className="text-muted hover:text-ink">
-              Ver capturas ({images.length}) ↗
+              {labels.screenshots.replace("{n}", String(images.length))} ↗
             </button>
           )}
           {project.link && (
@@ -92,7 +100,7 @@ export function ProjectCard({ project }: { project: Project }) {
           )}
         </div>
       </article>
-      {galleryOpen && <ImageGallery title={project.name} images={images} onClose={() => setGalleryOpen(false)} />}
+      {galleryOpen && <ImageGallery title={project.name} images={images} labels={galleryLabels} onClose={() => setGalleryOpen(false)} />}
     </Tilt>
   );
 }

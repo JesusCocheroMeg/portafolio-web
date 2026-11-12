@@ -1,5 +1,7 @@
 // Fuente: centro/contenido/sobre-mi.md, sección Contacto (DEC-05, DEC-06).
-export const contact = {
+import type { Contact, WhatsappFloat } from "../types";
+
+export const contact: Contact = {
   title: "¿Hablamos de tu proyecto?",
   text: "Cuéntame qué necesitas y vemos juntos el punto correcto de la balanza entre lo que necesita y lo que cuesta.",
   links: [
@@ -8,14 +10,12 @@ export const contact = {
     { id: "github", label: "GitHub", value: "JesusCocheroMeg", href: "https://github.com/JesusCocheroMeg" },
     { id: "linkedin", label: "LinkedIn", value: "jesus-cf", href: "https://www.linkedin.com/in/jesus-cf-494502272/" },
   ],
-} as const;
+};
 
 // Botón flotante (F14): abre WhatsApp con un mensaje ya escrito.
-export const whatsappFloat = {
+export const whatsappFloat: WhatsappFloat = {
   label: "Escríbeme por WhatsApp",
   href: `https://wa.me/573044685281?text=${encodeURIComponent(
     "Hola Jesús, vi tu portafolio y me gustaría hablar contigo sobre un proyecto.",
   )}`,
 };
-
-export type ContactId = (typeof contact.links)[number]["id"];

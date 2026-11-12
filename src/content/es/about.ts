@@ -1,12 +1,14 @@
 // Fuente: centro/contenido/sobre-mi.md (DEC-06). Si difieren, gana el contenido.
-export const quality = {
+import type { Adapt, Quality } from "../types";
+
+export const quality: Quality = {
   title: "Lo que garantizo",
   text: "Desde mi experiencia en desarrollo de software, la calidad del producto es vital: qué tan seguro es, cómo consume los recursos, qué tan optimizado está, qué tan sólida es su arquitectura y qué tan fácil es de mantener. El desarrollo a la medida es una inversión valiosa y costosa, y sin calidad termina desaprovechándose. Eso es lo que garantizo: a la larga es lo que hace rentable un sistema y lo que hace que la inversión valga la pena.",
   proof: "Prueba de ello: los sistemas que he construido siguen funcionando y las empresas los mantienen sin depender de mí.",
   pillars: ["Seguridad", "Uso de recursos", "Optimización", "Arquitectura", "Mantenibilidad"],
-} as const;
+};
 
-export const adapt = {
+export const adapt: Adapt = {
   title: "Me adapto a lo que la empresa necesita",
   intro:
     "Me preocupo por entender tu negocio, para recomendarte lo que de verdad te conviene. Cada proyecto es una balanza entre lo que necesita y lo que cuesta.",
@@ -30,16 +32,4 @@ export const adapt = {
   ],
   closing:
     "Cómo empiezo depende del caso y del contexto. En un proyecto nuevo, primero hago un diagnóstico: ahí se mide cuántos usuarios se esperan y qué necesita de verdad la plataforma. Si el proyecto ya está en marcha, me sumo a lo que existe y reviso solo lo necesario para continuar. Así la balanza queda en el punto correcto.",
-} as const;
-
-// Tecnologías de Focus, Nova y el Portal de Clientes (contenido/proyectos.md) e infraestructura de «Me adapto».
-export const techStack = [
-  "TypeScript", "JavaScript", "React", "Next.js", "Redux", "Material UI", "Tailwind CSS", "Vite",
-  "Node.js", "Express", "NestJS", "NATS", "Prisma", "Sequelize", "MySQL", "PostgreSQL", "JWT", "Docker",
-] as const;
-
-export const tools = [
-  "Google Cloud", "Vercel", "Cloudflare", "Resend", "GitHub Actions", "Git", "GitHub",
-] as const;
-
-export type TechName = (typeof techStack)[number] | (typeof tools)[number];
+};
