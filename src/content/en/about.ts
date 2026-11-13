@@ -15,7 +15,7 @@ export const adapt: Adapt = {
   cases: [
     {
       title: "I work with what you already use",
-      text: "If you already have infrastructure, like Vercel or Google Cloud, I build on it. If you don't, I recommend the best option based on my experience and what the platform needs. Same with your tools: if you document in Notion, for example, I adapt and work there without a problem, even if it's not the one I've used most. And if you use something I don't know, I first do a thorough review to understand how it's set up; if needed, I bring in a specialist in that technology so development doesn't stall.",
+      text: "If you already have infrastructure, like Vercel or Google Cloud, I build on it. If you don't, I recommend the best option based on my experience and what the platform needs. Same with your tools: if you document in Confluence, for example, I adapt and work there without a problem, even if it's not the one I've used most. And if you use something I don't know, I first do a thorough review to understand how it's set up; if needed, I bring in a specialist in that technology so development doesn't stall.",
     },
     {
       title: "If budget or time is tight",
