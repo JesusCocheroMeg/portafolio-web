@@ -6,7 +6,7 @@ export const career: readonly CareerItem[] = [
     period: "may 2026 – hoy",
     title: "Desarrollador Semi Senior",
     place: "MEG.IA · Medellín",
-    text: "Lidero ARM, un CRM con IA, Conex y el Portal de Clientes, y colaboro en Speech Analytics.",
+    text: "Lidero ARM, un CRM con IA, Conex y el Portal de Clientes.",
     kind: "trabajo",
     current: true,
   },

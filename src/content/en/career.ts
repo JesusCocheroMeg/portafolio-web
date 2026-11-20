@@ -6,7 +6,7 @@ export const career: readonly CareerItem[] = [
     period: "May 2026 – present",
     title: "Software Developer",
     place: "MEG.IA · Medellín, Colombia",
-    text: "I lead ARM (an AI-powered CRM), Conex and the Client Portal, and I contribute to Speech Analytics.",
+    text: "I lead ARM (an AI-powered CRM), Conex and the Client Portal.",
     kind: "trabajo",
     current: true,
   },
