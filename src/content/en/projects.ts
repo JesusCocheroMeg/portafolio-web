@@ -73,17 +73,6 @@ export const companies: readonly Company[] = [
           { src: "/proyectos/portal/reportes.webp", alt: "Client Portal: service usage reports exportable to Excel (data blurred)" },
         ],
       },
-      {
-        name: "Speech Analytics",
-        featured: true,
-        role: "Contributor",
-        summary:
-          "AI that evaluates 100% of a contact center's calls. My contribution: tickets, requests and automated billing.",
-        details: [
-          "It transcribes and evaluates 100% of a contact center's calls with AI, and trains agents with a simulated customer. I helped integrate the platform's ticket and request system and automate billing.",
-        ],
-        link: { href: "https://megia.com.co/productos/speech-analytics", label: "See product" },
-      },
     ],
   },
   {
@@ -95,10 +84,10 @@ export const companies: readonly Company[] = [
         role: "Lead and main developer",
         summary:
           "It replaced the CRM the company was paying a third party for with one built around the business. Used daily by about 70 users across two shifts.",
-        highlight: "COP 8–11 M saved per month, still saved today",
+        highlight: "Removed the monthly fee for the external CRM, a saving that holds to this day",
         details: [
           "Telecom sales management (mobile, home, dedicated internet and technology): customers, campaigns, role-based access, a history of every change, scheduling, logistics, inventory and Excel reports.",
-          "The previous CRM was expensive and didn't fit the business. Focus replaced it with a much better-suited system and better sales traceability. It saves COP 8–11 million a month on what was paid for the old system, a result that holds to this day.",
+          "The previous CRM was expensive and didn't fit the business. Focus replaced it with a much better-suited system and better sales traceability. The company stopped paying the monthly fee for the old system, a saving that holds to this day.",
           "I led it end to end, from requirements with each department to training. Since I left, it's still in operation and the company maintains it.",
         ],
         tech: ["React", "Vite", "Redux", "Material UI", "Node.js", "Express", "Sequelize", "MySQL", "JWT"],

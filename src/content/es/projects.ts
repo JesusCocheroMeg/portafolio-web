@@ -72,17 +72,6 @@ export const companies: readonly Company[] = [
           { src: "/proyectos/portal/reportes.webp", alt: "Portal de Clientes: reportes de consumo de servicios exportables a Excel (datos difuminados)" },
         ],
       },
-      {
-        name: "Speech Analytics",
-        featured: true,
-        role: "Colaborador",
-        summary:
-          "IA que evalúa el 100 % de las llamadas de un contact center. Mi aporte: tickets, solicitudes y facturación automática.",
-        details: [
-          "Transcribe y evalúa con IA el 100 % de las llamadas de un contact center, y entrena a los agentes con un cliente simulado. Ayudé a integrar el sistema de tickets y solicitudes de la plataforma, y a automatizar la facturación.",
-        ],
-        link: { href: "https://megia.com.co/productos/speech-analytics", label: "Ver producto" },
-      },
     ],
   },
   {
@@ -94,10 +83,10 @@ export const companies: readonly Company[] = [
         role: "Líder y desarrollador principal",
         summary:
           "Reemplazó el CRM que se le pagaba a un tercero, con uno hecho a la medida del negocio. Usado a diario por unos 70 usuarios en dos turnos.",
-        highlight: "COP 8–11 M al mes de ahorro, que se mantiene hasta hoy",
+        highlight: "Eliminó la mensualidad del CRM externo, un ahorro que se mantiene hasta hoy",
         details: [
           "Gestión de ventas de telecomunicaciones (móvil, hogar, internet dedicado y tecnología): clientes, campañas, roles por cargo, historial de cada cambio, agendamiento, logística, inventario y reportes en Excel.",
-          "El CRM anterior era caro y no se ajustaba al negocio. Focus lo reemplazó con un sistema mucho más adecuado y mejor trazabilidad de las ventas. Ahorro de COP 8–11 millones al mes en lo que se pagaba por el sistema anterior, un resultado que se mantiene hasta hoy.",
+          "El CRM anterior era caro y no se ajustaba al negocio. Focus lo reemplazó con un sistema mucho más adecuado y mejor trazabilidad de las ventas. La empresa dejó de pagar la mensualidad del sistema anterior, un ahorro que se mantiene hasta hoy.",
           "Lo lideré de punta a punta, de los requisitos con cada área a la capacitación. Tras mi salida sigue en operación y la empresa lo mantiene.",
         ],
         tech: ["React", "Vite", "Redux", "Material UI", "Node.js", "Express", "Sequelize", "MySQL", "JWT"],
