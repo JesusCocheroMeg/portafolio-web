@@ -8,7 +8,7 @@ export const contact: Contact = {
     { id: "email", label: "Correo", value: "contacto@jesuscochero.dev", href: "mailto:contacto@jesuscochero.dev" },
     { id: "whatsapp", label: "WhatsApp", value: "304 468 5281", href: "https://wa.me/573044685281" },
     { id: "github", label: "GitHub", value: "JesusCocheroMeg", href: "https://github.com/JesusCocheroMeg" },
-    { id: "linkedin", label: "LinkedIn", value: "jesus-cf", href: "https://www.linkedin.com/in/jesus-cf-494502272/" },
+    { id: "linkedin", label: "LinkedIn", value: "jesuscocherodev", href: "https://www.linkedin.com/in/jesuscocherodev/" },
   ],
   // Mismo contenido en Instagram, TikTok y YouTube: basta con Instagram (decisión 2026-11-22).
   social: [{ id: "instagram", label: "Instagram", href: "https://www.instagram.com/jesuscochero.dev/" }],
