@@ -49,7 +49,10 @@ export type Project = {
 export type Company = { name: string; note: string; projects: readonly Project[] };
 
 export type ContactLink = { id: ContactId; label: string; value: string; href: string };
-export type Contact = { title: string; text: string; links: readonly ContactLink[] };
+/** Redes donde publico contenido. Van en el pie, no en Contacto (esa sección es para clientes). */
+export type SocialId = "instagram";
+export type SocialLink = { id: SocialId; label: string; href: string };
+export type Contact = { title: string; text: string; links: readonly ContactLink[]; social: readonly SocialLink[] };
 export type WhatsappFloat = { label: string; href: string };
 
 /** Textos de la interfaz que no son contenido: botones, etiquetas y títulos de sección. */

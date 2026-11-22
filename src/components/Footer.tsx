@@ -1,4 +1,4 @@
-import { contactIcons } from "@/components/icons";
+import { contactIcons, socialIcons } from "@/components/icons";
 import { getContent, type Lang } from "@/content";
 import { version } from "../../package.json";
 
@@ -34,6 +34,25 @@ export function Footer({ lang }: { lang: Lang }) {
                   data-umami-event-canal={l.id}
                   data-umami-event-lugar="pie"
                   {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="grid h-9 w-9 place-items-center rounded-full transition hover:bg-surface-2 hover:text-accent-2"
+                >
+                  <Icon aria-hidden="true" className="h-4 w-4" />
+                </a>
+              </li>
+            );
+          })}
+          {contact.social.map((s) => {
+            const Icon = socialIcons[s.id];
+            return (
+              <li key={s.id}>
+                <a
+                  href={s.href}
+                  aria-label={s.label}
+                  data-umami-event="red-social"
+                  data-umami-event-red={s.id}
+                  data-umami-event-lugar="pie"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="grid h-9 w-9 place-items-center rounded-full transition hover:bg-surface-2 hover:text-accent-2"
                 >
                   <Icon aria-hidden="true" className="h-4 w-4" />

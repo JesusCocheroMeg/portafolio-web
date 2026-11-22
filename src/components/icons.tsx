@@ -1,12 +1,12 @@
 import type { IconType } from "react-icons";
-import { FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import {
   SiCloudflare, SiDocker, SiExpress, SiGit, SiGithub, SiGithubactions, SiGooglecloud, SiJavascript,
   SiJsonwebtokens, SiMui, SiMysql, SiNatsdotio, SiNestjs, SiNextdotjs, SiNodedotjs, SiResend,
   SiPostgresql, SiPrisma, SiReact, SiRedux, SiSequelize, SiTailwindcss, SiTypescript, SiVercel, SiVite,
 } from "react-icons/si";
 import type { TechName } from "@/content/tech";
-import type { ContactId } from "@/content/types";
+import type { ContactId, SocialId } from "@/content/types";
 
 export const techIcons: Record<TechName, IconType> = {
   TypeScript: SiTypescript,
@@ -41,4 +41,8 @@ export const contactIcons: Record<ContactId, IconType> = {
   whatsapp: FaWhatsapp,
   github: FaGithub,
   linkedin: FaLinkedinIn,
+};
+
+export const socialIcons: Record<SocialId, IconType> = {
+  instagram: FaInstagram,
 };

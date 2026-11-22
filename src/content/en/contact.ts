@@ -9,6 +9,7 @@ export const contact: Contact = {
   text: "Tell me what you need and together we'll find the right balance between what it needs and what it costs. Happy to work with you in English by email or chat.",
   // Mismos datos que en español; solo cambian las etiquetas.
   links: es.links.map((l) => ({ ...l, label: label[l.id] })),
+  social: es.social,
 };
 
 const whatsappNumber = es.links.find((l) => l.id === "whatsapp")!.href;
