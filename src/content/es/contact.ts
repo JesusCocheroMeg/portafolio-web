@@ -11,7 +11,7 @@ export const contact: Contact = {
     { id: "linkedin", label: "LinkedIn", value: "jesuscocherodev", href: "https://www.linkedin.com/in/jesuscocherodev/" },
   ],
   // Mismo contenido en Instagram, TikTok y YouTube: basta con Instagram (decisión 2026-11-22).
-  social: [{ id: "instagram", label: "Instagram", href: "https://www.instagram.com/jesuscochero.dev/" }],
+  social: [{ id: "instagram", label: "Instagram", href: "https://www.instagram.com/jesus.cochero.dev/" }],
 };
 
 // Botón flotante (F14): abre WhatsApp con un mensaje ya escrito.
