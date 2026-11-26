@@ -21,6 +21,7 @@ export type Profile = {
 
 export type Services = { intro: string; items: readonly { id: ServiceId; title: string; text: string }[] };
 export type Quality = { title: string; text: string; proof: string; pillars: readonly string[] };
+export type Learning = { title: string; text: string; sources: readonly { name: string; text: string }[]; closing: string };
 export type Adapt = { title: string; intro: string; cases: readonly { title: string; text: string }[]; closing: string };
 
 export type CareerItem = {
@@ -83,6 +84,7 @@ export type Content = {
   services: Services;
   quality: Quality;
   adapt: Adapt;
+  learning: Learning;
   career: readonly CareerItem[];
   companies: readonly Company[];
   contact: Contact;
