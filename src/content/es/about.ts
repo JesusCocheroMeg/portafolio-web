@@ -1,5 +1,5 @@
 // Fuente: centro/contenido/sobre-mi.md (DEC-06). Si difieren, gana el contenido.
-import type { Adapt, Quality } from "../types";
+import type { Adapt, Learning, Quality } from "../types";
 
 export const quality: Quality = {
   title: "Lo que garantizo",
@@ -32,4 +32,16 @@ export const adapt: Adapt = {
   ],
   closing:
     "Cómo empiezo depende del caso y del contexto. En un proyecto nuevo, primero hago un diagnóstico: ahí se mide cuántos usuarios se esperan y qué necesita de verdad la plataforma. Si el proyecto ya está en marcha, me sumo a lo que existe y reviso solo lo necesario para continuar. Así la balanza queda en el punto correcto.",
+};
+
+// Aprobado por Jesús el 2026-11-25.
+export const learning: Learning = {
+  title: "Mejora continua",
+  text: "Tengo una base sólida y la demuestro en cada proyecto que entrego. Aun así, seguir creciendo es para mí un hábito y un reto personal: cada semana dedico tiempo a aprender y a sacar adelante proyectos personales, donde profundizo en lo que ya domino y lo pulo en la práctica, para aportarle a tu empresa soluciones con más conocimiento y más calidad. Por eso, si tu proyecto pide algo que aún no he hecho, lo resuelvo con la misma base y de forma profesional.",
+  sources: [
+    { name: "Udemy", text: "Plan anual desde 2025: profundizo en los detalles técnicos del desarrollo y en IA." },
+    { name: "Imperio Agéntico", text: "Comunidad de IA y agentes, de las más fuertes de Latinoamérica: intercambio con otros desarrolladores lo que funciona en proyectos reales." },
+    { name: "YouTube y canales técnicos", text: "Sigo de cerca lo nuevo y me quedo solo con lo que eleva la calidad de lo que construyo." },
+  ],
+  closing: "Lo que aprendo no se queda en cursos: termina en sistemas que hoy usan empresas reales.",
 };

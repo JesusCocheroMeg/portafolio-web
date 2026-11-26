@@ -12,7 +12,7 @@ export const services: Services = {
     {
       id: "ai",
       title: "AI in your processes",
-      text: "AI that records, evaluates and suggests: sales that fill themselves in and audited calls.",
+      text: "A diagnosis of where AI helps your business, and agents that take over the tasks that eat up your time today: recording, reviewing and suggesting.",
     },
     {
       id: "automation",

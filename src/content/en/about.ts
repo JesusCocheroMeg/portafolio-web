@@ -1,5 +1,5 @@
 // Fuente: centro/contenido/en/sitio.md. Si difieren, gana el contenido.
-import type { Adapt, Quality } from "../types";
+import type { Adapt, Learning, Quality } from "../types";
 
 export const quality: Quality = {
   title: "What I guarantee",
@@ -32,4 +32,15 @@ export const adapt: Adapt = {
   ],
   closing:
     "How I start depends on the case and the context. On a new project, I first run a diagnosis: that's where we measure how many users to expect and what the platform really needs. If the project is already underway, I join what exists and review only what's needed to keep going. That way the balance lands in the right place.",
+};
+
+export const learning: Learning = {
+  title: "Continuous improvement",
+  text: "I have a solid foundation, and I prove it in every project I deliver. Even so, growing is a habit and a personal challenge for me: every week I set aside time to learn and to move personal projects forward, where I go deeper into what I already master and refine it in practice, so I can bring your company solutions with more knowledge and more quality. That's why, if your project calls for something I haven't done yet, I solve it with the same foundation and professionally.",
+  sources: [
+    { name: "Udemy", text: "Annual plan since 2025: I dig into the technical details of development and into AI." },
+    { name: "Imperio Agéntico", text: "An AI and agents community, one of the strongest in Latin America: I share with other developers what works in real projects." },
+    { name: "YouTube and tech channels", text: "I follow what's new closely and keep only what raises the quality of what I build." },
+  ],
+  closing: "What I learn doesn't stay in courses: it ends up in systems that real companies use today.",
 };

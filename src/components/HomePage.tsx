@@ -1,6 +1,7 @@
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
+import { Learning } from "@/components/sections/Learning";
 import { Projects } from "@/components/sections/Projects";
 import { Services } from "@/components/sections/Services";
 import { Tech } from "@/components/sections/Tech";
@@ -13,6 +14,7 @@ export function HomePage({ lang }: { lang: Lang }) {
       <Services lang={lang} />
       <About lang={lang} />
       <Projects lang={lang} />
+      <Learning lang={lang} />
       <Tech lang={lang} />
       <Contact lang={lang} />
     </main>
