@@ -27,6 +27,29 @@ export const companies: readonly Company[] = [
         ],
       },
       {
+        name: "Hermes · AI agents for WhatsApp",
+        featured: true,
+        role: "Forward Deployed Engineer",
+        summary:
+          "I deploy AI agents that handle customer service and sales over WhatsApp for small businesses: I connect them to what each business knows, test them and make sure the team actually uses them.",
+        highlight: "Since November 2026 · each client with its own agent and isolated data",
+        details: [
+          "Hermes is MEG.IA's product for customer service and sales over WhatsApp with artificial intelligence. My job is to bring it into each business and make it work day to day: from the kickoff visit, where I learn how they sell and what their customers ask, to the handover, when the team uses it without depending on me.",
+          "The technical side: I turn the business's catalogs, prices and documents into a knowledge base (RAG) the agent queries; I configure its instructions and scenarios, and test it before go-live. Each client's data is kept separate, and I verify that an agent never answers with another client's data.",
+          "I'm also the client's voice to the team building Hermes: I report what breaks or gets in the way on the platform, prioritized by impact, and propose improvements.",
+        ],
+        bullets: [
+          "Phased rollout plan with success criteria",
+          "Per-client knowledge base (RAG)",
+          "Agent instructions, scenarios and testing",
+          "Data isolation between clients",
+          "Role-based training and handover sign-off",
+          "Product QA and feedback",
+        ],
+        tech: ["AI agents", "RAG", "Prompt engineering", "WhatsApp", "MCP"],
+        link: { href: "https://megia.com.co/productos/hermes", label: "See Hermes" },
+      },
+      {
         name: "Conex · CRM for contact centers",
         featured: true,
         role: "Product lead",

@@ -26,6 +26,29 @@ export const companies: readonly Company[] = [
         ],
       },
       {
+        name: "Hermes · Agentes de IA para WhatsApp",
+        featured: true,
+        role: "Forward Deployed Engineer",
+        summary:
+          "Implemento agentes de IA que atienden y venden por WhatsApp en pymes: los conecto con lo que sabe cada negocio, los pruebo y me aseguro de que el equipo los use.",
+        highlight: "Desde noviembre de 2026 · cada cliente con su propio agente y su información aislada",
+        details: [
+          "Hermes es el producto de MEG.IA para atender y vender por WhatsApp con inteligencia artificial. Mi trabajo es llevarlo a cada negocio y que funcione en su día a día: desde la visita de arranque, donde entiendo cómo vende y qué le preguntan sus clientes, hasta la entrega, cuando el equipo lo usa sin depender de mí.",
+          "La parte técnica: convierto catálogos, precios y documentos del negocio en una base de conocimiento (RAG) que el agente consulta; configuro sus instrucciones y escenarios, y lo pruebo antes de salir. La información de cada cliente va separada y verifico que un agente nunca responda con datos de otro.",
+          "También soy la voz del cliente ante el equipo que desarrolla Hermes: reporto lo que falla o estorba en la plataforma, priorizado por impacto, y propongo mejoras.",
+        ],
+        bullets: [
+          "Plan de implementación por fases con criterio de éxito",
+          "Base de conocimiento (RAG) por cliente",
+          "Instrucciones, escenarios y pruebas del agente",
+          "Aislamiento de la información entre clientes",
+          "Capacitación por rol y acta de entrega",
+          "QA y retroalimentación de producto",
+        ],
+        tech: ["Agentes de IA", "RAG", "Prompt engineering", "WhatsApp", "MCP"],
+        link: { href: "https://megia.com.co/productos/hermes", label: "Ver Hermes" },
+      },
+      {
         name: "Conex · CRM para contact centers",
         featured: true,
         role: "Líder del producto",
